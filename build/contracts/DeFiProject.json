@@ -28,7 +28,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -41,7 +42,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -145,7 +147,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.12+commit.f00d7308\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_comptroller\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_oracle\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"cTokenAddress\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"borrowAmount\",\"type\":\"uint256\"}],\"name\":\"borrow\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"comptroller\",\"outputs\":[{\"internalType\":\"contract ComptrollerInterface\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"cTokenAddress\",\"type\":\"address\"}],\"name\":\"enterMarket\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"cTokenAddress\",\"type\":\"address\"}],\"name\":\"getMaxBorrow\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"priceOracle\",\"outputs\":[{\"internalType\":\"contract PriceOracleInterface\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"cTokenAddress\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"cTokenAmount\",\"type\":\"uint256\"}],\"name\":\"redeem\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"cTokenAddress\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"underlyingAmount\",\"type\":\"uint256\"}],\"name\":\"repayBorrow\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"cTokenAddress\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"underlyingAmount\",\"type\":\"uint256\"}],\"name\":\"supply\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/DeFiProject.sol\":\"DeFiProject\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0xbbc8ac883ac3c0078ce5ad3e288fbb3ffcc8a30c3a98c0fda0114d64fc44fca2\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://87a7a5d2f6f63f84598af02b8c50ca2df2631cb8ba2453e8d95fcb17e4be9824\",\"dweb:/ipfs/QmR76hqtAcRqoFj33tmNjcWTLrgNsAaakYwnKZ8zoJtKei\"]},\"project:/contracts/CTokenInterface.sol\":{\"keccak256\":\"0x6d6c3931eee998ca2b0c4ec455c0a0a550fd337f661a59ea16cba7e8f2853b7b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://bb63f50a6dbd8e27c02d045a27d7bb7038b0fa2a3eb644b9e8bfb31b6c318ac3\",\"dweb:/ipfs/QmX1tw6NQJ9bNwrMNC9JZAUU9TNWgUgpmEan2TfB8J9agN\"]},\"project:/contracts/ComptrollerInterface.sol\":{\"keccak256\":\"0x5bbab8e2e6e9a362edbf72fb2a90e4339d52a33d7eedc669a4869855779079d3\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1b2e6f35395e33fb0ff8f4d329c41223844860d8b83f50c371e309c1cc1bf039\",\"dweb:/ipfs/QmbNDxLRCKhhrmd6UpXSUwLvEf1TgM7fVuRnKDw7LNkyxm\"]},\"project:/contracts/DeFiProject.sol\":{\"keccak256\":\"0x851d3ab326a0f12fc57f13f92d62d75b92e252e688f56b1282a266416c68b02a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://683889e49f7f3cec7f69a10600e4f263b871ce687d55a2c7f4c56d4ac2da5f4b\",\"dweb:/ipfs/QmbxwEUTKgPKzZ1vSPfwEsMqX3QU1xbhZ6uRPefUPoNwoS\"]},\"project:/contracts/PriceOracleInterface.sol\":{\"keccak256\":\"0x857063e44ba67e0ea3763726de10f2ec2e9887d88e3799ffd7b6a50fb7bf16c2\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9129b97adfa0db950a09e2fd637a63f2c626030ed4997fee36353151781222d9\",\"dweb:/ipfs/QmUBZPQKo6VgRcwG7Ko82QFwmww2pUVKzdk8rrosP15uvS\"]}},\"version\":1}",
@@ -17708,9 +17711,17 @@
     "name": "solc",
     "version": "0.8.12+commit.f00d7308.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "4": {
+      "events": {},
+      "links": {},
+      "address": "0xc6A1eA313099655b83c731a111d1a66E63206ba9",
+      "transactionHash": "0xef560c1b89ad4da49b5693e29f0c788feb855a170366dc32ac40a9b93523ada9"
+    }
+  },
   "schemaVersion": "3.4.6",
-  "updatedAt": "2022-04-16T11:33:15.651Z",
+  "updatedAt": "2022-04-16T12:07:42.597Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {},
