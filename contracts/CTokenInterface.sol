@@ -1,7 +1,11 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.4.22 <0.9.0;
+pragma solidity ^0.8.1;
 
-contract CTokenInterface {
-  constructor() public {
-  }
+interface CTokenInterface {
+  function mint(uint mintAmount) external returns (uint);
+  function redeem(uint redeemTokens) external returns (uint);
+  function redeemUnderlying(uint redeemAmount) external returns (uint);
+  function borrow(uint borrowAmount) external returns (uint);
+  function repayBorrow(uint repayAmount) external returns (uint);
+  function underlying() external view returns(address);
 }
